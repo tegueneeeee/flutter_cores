@@ -1,4 +1,4 @@
-name: cores_core
+name: core
 description: This package contains the core functionality for the cores project.
 publish_to: none
 version: 1.0.0
@@ -7,10 +7,14 @@ version: 1.0.0
 environment:
   sdk: ^3.7.2
 
+resolution: workspace
+
 # Add regular dependencies here.
 dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
   freezed_annotation: ^3.0.0
-  riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
   simple_logger: ^1.10.0
 
