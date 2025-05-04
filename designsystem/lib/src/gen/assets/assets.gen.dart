@@ -14,12 +14,10 @@ class Assets {
 
   static const String package = 'designsystem';
 
-  static const AssetGenImage yumemiLogo = AssetGenImage(
-    'assets/yumemi_logo.png',
-  );
+  static const AssetGenImage meowLogo = AssetGenImage('assets/meow_logo.png');
 
   /// List of all assets
-  static List<AssetGenImage> get values => [yumemiLogo];
+  static List<AssetGenImage> get values => [meowLogo];
 }
 
 class AssetGenImage {
