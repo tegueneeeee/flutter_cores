@@ -1,3 +1,30 @@
-# https://dart.dev/guides/libraries/private-files
-# Created by `dart pub`
-.dart_tool/
+# Flutter/Dart/Pub related
+/.dart_tool/*
+/.flutter-plugins
+/.flutter-plugins-dependencies
+
+# IntelliJ related
+/*.iml
+/.idea/*
+# Keep the project jsonSchemas.
+!/.idea/jsonSchemas.xml
+# Keep the run configurations.
+!/.idea/runConfigurations/
+
+# mason related
+/.mason
+
+# https://github.com/felangel/mason/issues/947
+/mason-lock.json
+
+# firebase
+/.firebase
+/firebase-debug.log
+
+# FVM Version Cache
+/.fvm
+
+# generated files
+*.g.dart
+*.freezed.dart
+*.gen.dart
