@@ -1,5 +1,4 @@
 import 'package:core/core.dart';
-import 'package:core/src/keys/shared_preferences_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -13,7 +12,7 @@ class ThemeModeNotifier extends _$ThemeModeNotifier {
   }
 
   ThemeMode _getThemeMode() {
-    final sharedPreferences = ref.watch(sharedPreferencesProvider).requireValue;
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
     final themeIndex = sharedPreferences.getInt(
       SharedPreferencesKeys.themeMode.name,
     );
@@ -29,7 +28,7 @@ class ThemeModeNotifier extends _$ThemeModeNotifier {
   }
 
   Future<void> _saveThemeMode(int themeModeIndex) async {
-    final sharedPreferences = ref.watch(sharedPreferencesProvider).requireValue;
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
     await sharedPreferences.setInt(
       SharedPreferencesKeys.themeMode.name,
       themeModeIndex,
